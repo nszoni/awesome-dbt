@@ -1,4 +1,4 @@
-require_relative 'osia_helper'
+require_relative 'dbt_helper'
 
 UNIQUES = 'check-unique.txt' # should be unique
 LINKS   = 'check-links.txt'  # allow dupes

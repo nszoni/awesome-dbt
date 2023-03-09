@@ -20,7 +20,7 @@ jobs:
 
       - name: Link Checker
         run: |
-          ruby .github/osia_convert.rb
+          ruby .github/dbt_convert.rb
           gem install awesome_bot
-          ruby .github/osia_get_links.rb
+          ruby .github/dbt_get_links.rb
           awesome_bot check-unique.txt --allow-ssl -a 302,429 -w xbmc/xbmc
