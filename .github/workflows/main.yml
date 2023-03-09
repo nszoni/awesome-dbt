@@ -21,4 +21,10 @@ jobs:
       - name: Link Checker
         run: |
           gem install awesome_bot
-          awesome_bot check-unique.txt --allow-ssl -a 302,429 -w xbmc/xbmc
+          awesome_bot README.md --request-delay 1 --allow-dupe
+
+      - uses: actions/upload-artifact@v1
+        if: failure()
+        with:
+          name: ab-results
+          path: ab-results-README.md-filtered.json
